@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Emblings Items</title>
+  <style>
+    .pixel-art {
+      image-rendering: pixelated;
+      width: 64px; /* adjust to desired size */
+      margin: 5px;
+    }
+    #items-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <h1>Emblings Items</h1>
+  <div id="items-container"></div>
+
+  <script>
+    // List of your images (adjust filenames!)
+    const imageFiles = [
+      "Tuna.Glow.png",
+      "grape.png",
+      "Strawberry.png",
+      "item4.png"
+    ];
+
+    const container = document.getElementById("items-container");
+    const baseURL = "https://username.github.io/emblings-items/images/"; // replace with your repo URL or custom domain
+
+    imageFiles.forEach(file => {
+      const img = document.createElement("img");
+      img.src = baseURL + file;
+      img.className = "pixel-art";
+      container.appendChild(img);
+    });
+  </script>
+</body>
+</html>
+
